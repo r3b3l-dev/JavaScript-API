@@ -23,16 +23,23 @@ async function getStatus(e) {
 	}
 }
 
+// Initial solution
 
-
-// funcion to display data in modal. Takes in the parameter of data.
 function displayStatus(data) {
 
-	let heading = "API Key Status";
-	let results = `<div>Your key is valid until</div>`;
-	results += `<div class="key-status">${data.expiry}</div>`;
-
-	document.getElementById("resultsModalTitle").innerText = heading;
-	document.getElementById("results-content").innerHTML = results;
+	document.getElementById("resultsModalTitle").innerText = `API Key Status`;
+	document.getElementById("results-content").innerHTML = `Your key is valid until <br> ${data.expiry}`;
 	resultsModal.show();
 }
+
+// funcion to display data in modal. Takes in the parameter of data.
+// function displayStatus(data) {
+
+// 	let heading = "API Key Status";
+// 	let results = `<div>Your key is valid until</div>`;
+// 	results += `<div class="key-status">${data.expiry}</div>`;
+
+// 	document.getElementById("resultsModalTitle").innerText = heading;
+// 	document.getElementById("results-content").innerHTML = results;
+// 	resultsModal.show();
+// }
